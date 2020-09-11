@@ -19,17 +19,17 @@ You need to adjust to the actual path of your project.
             alert('click');
         });
 
-        bj('#btnNormal').setEvent('click', function () {
+        bj('#btnNormal').event('click', function () {
             alert('click button');
         });
 
-        bj('#btn3').setEvent('click', function () {
+        bj('#btn3').event('click', function () {
             alert('click button3');
         });
 
  });
 </pre>
-Better JS refers to some of jQuery's advantages and implements some excellent functions. Using BJ is just like jQuery's $.
+BetterJS refers to some of jQuery's advantages and implements some excellent functions. Using bj is just like jQuery's $.
 
 ## 2. ui control snapshot
 ### (1). button
