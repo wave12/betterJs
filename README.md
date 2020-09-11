@@ -4,9 +4,9 @@ This is a lightweight overall solution for the web front end that does not rely 
 How to use it
 
 1. Add CSS and JS files to the web page, such as:
-<pre>
+<pre><code>
 <link rel="stylesheet" href="./css/betterJs.css"></link> 
-</pre>
+</code></pre>
 <pre>
 <script type="text/javascript" src="./betterJs.js"></script>
 </pre>
