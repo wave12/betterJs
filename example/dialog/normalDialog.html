@@ -1,0 +1,97 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<link rel="stylesheet" href="../demo.css"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+
+<script type="text/javascript">
+    bj.ready(function () {
+        bj('#myDialog3').dialog({
+            modal:true,
+            buttons: {
+                ok: {
+                    text: "confirm cart",
+                    click: function () {
+                        alert('click ok');
+                    }
+                },
+                cancel:{
+                    text: "exit",
+                }
+            }
+        });
+
+        bj('#btnNormal').event('click', function () {
+            bj('#myDialog').dialog("show");
+        });
+        bj('#btnNormal2').event('click', function () {
+            bj('#myDialog2').dialog("show");
+        });
+        bj('#btnNormal3').event('click', function () {
+
+            bj('#myDialog3').dialog("show");
+        });
+
+    });
+</script>
+<body>
+
+<div class="box">
+        <div class="leftCate">
+            <div class="bjTemplate" src="../left.html"></div>
+        </div>
+        <div class="rightCon">
+            <div class="conTitle">dialog control</div>
+
+            <div class="con">
+                <div id="btnNormal" class="bjButton">open modal dialog</div>
+                <div id="btnNormal2" class="bjButton">open modaless dialog</div>
+                <div class="codeHead">code:</div>
+                <textarea style="height: 160px" class="code">bj('#btnNormal').event('click', function () {&#10;&nbsp;&nbsp;&nbsp;&nbsp;bj('#myDialog').dialog("show");&#10;});&#10;&#10;bj('#btnNormal2').event('click', function () {&#10;&nbsp;&nbsp;&nbsp;&nbsp;bj('#myDialog2').dialog("show");&#10;});</textarea>
+
+                <br><br>
+                <div id="btnNormal3" class="bjButton">open modal dialog with buttons</div>
+                <div class="codeHead">code:</div>
+                <textarea style="height: 260px"  class="code">
+bj('#myDialog3').dialog({
+    modal:true,
+    buttons: {
+        ok: {
+            text: "confirm cart",
+            click: function () {
+                alert('click ok');
+            }
+        },
+        cancel:{
+            text: "exit",
+        }
+    }
+});
+
+bj('#btnNormal3').event('click', function () {
+    bj('#myDialog3').dialog("show");
+});
+                </textarea>
+
+                <br><br>
+
+            </div>
+</div>
+
+<div id="myDialog" class="bjDialog" title="this is dialog title" style="width:400px; height:300px"
+     options="modal:'true'">
+    <h3 style="color:#0099FF;">this is modal dialog content!</h3>
+</div>
+
+<div id="myDialog2" class="bjDialog" title="this is dialog title" style="width:400px; height:300px"
+     options="">
+    <h3 style="color:#0099FF;">this is modaless dialog content!</h3>
+</div>
+
+<div id="myDialog3" class="bjDialog" title="this is dialog title" style="width:400px; height:300px"
+     options="">
+    <h3 style="color:#0099FF;">this is modal dialog content!</h3>
+</div>
+
+</body>
+</html>

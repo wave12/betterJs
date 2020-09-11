@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:bj="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<link rel="stylesheet" href="../demo.css?v6"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+
+<script type="text/javascript">
+    bj.ready(function () {
+        bj('#myTab').tabs({
+            tabClick:function (title, pos) {
+                alert(title);
+                if (pos == 2){
+                    alert('you click the third tab.');
+                }
+            }
+        });
+    });
+
+</script>
+<body>
+
+<div class="box">
+    <div class="leftCate">
+        <div class="bjTemplate" src="../left.html"></div>
+    </div>
+    <div class="rightCon">
+
+        <div class="conTitle">tab控件</div>
+
+        <div class="con">
+
+
+            <br/><br/>
+            <div id="myTab" class="bjTabs" options="itemSep:5,actionType:1,enableClose:true,activeTabPos:2">
+                <div bj:options="iconClass:'iconAdd'" title="tab1">这里是tab1内容</div>
+                <div title="tab2">tab2<p>ceshi</p></div>
+                <div bj:options="iconClass:'iconAdd'" title="tab3">tab3</div>
+            </div>
+
+            <div class="codeHead">code:</div>
+            <textarea style="height: 250px" class="code">
+<div id="myTab" class="bjTabs" options="itemSep:5,actionType:1,enableClose:true,activeTabPos:2">
+    <div bj:options="iconClass:'iconAdd'" title="tab1">这里是tab1内容</div>
+    <div title="tab2">tab2<p>ceshi</p></div>
+    <div bj:options="iconClass:'iconAdd'" title="tab3">tab3</div>
+</div>
+
+bj('#myTab').tabs({
+      tabClick:function (title, pos) {
+            alert(title);
+             if (pos == 2){
+                    alert('you click the third tab.');
+             }
+      }
+});
+            </textarea>
+
+        </div>
+    </div>
+
+</body>
+</html>

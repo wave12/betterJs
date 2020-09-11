@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css?v4003"></link>
+<script type="text/javascript" src="../../betterJs.js?v2000"></script>
+
+<link rel="stylesheet" href="../demo.css?v11"></link>
+
+<script type="text/javascript">
+    bj.ready(function () {
+        bjDebug = true;
+
+        bj('#myDataGrid').dataGrid({
+            url: 'dataGrid/data1',
+            method: 'get',
+            rowNumber: true,
+            columns: [
+                {field: 'productid', title: 'Product ID', width: 220, sortable: true},
+                {field: 'productname', title: 'Product Name', width: 320},
+                {
+                    field: 'unitcost', title: 'unitcost', width: 80, align: 'right',
+                    format: function (value, row, index) {
+                        return '$' + value;
+                    }
+                },
+                {field: 'status', title: 'Unit Cost', width: 80, align: 'right'},
+                {
+                    field: 'listprice', title: 'listprice', width: 120, align: 'right', sortable: true,
+                    format: function (value, row, index) {
+                        if (value > 100)
+                            return "<span style='color:#f00'>" + '$' + value + "</span>";
+                        else
+                            return '$' + value;
+                    }
+                },
+                {field: 'attr', title: 'attr', width: 60, align: 'center'},
+                {field: 'itemid', title: 'itemid', width: 60, align: 'center'}
+            ],
+            pager: {
+                visible: true, pageSize: 40, sizeList: [5, 10, 15, 20, 30, 40, 50, 70, 100, 200,
+                    300, 500, 700, 800, 900]
+            }
+        });
+    });
+
+</script>
+<body>
+
+
+<div class="leftCate">
+    <div class="bjTemplate" src="../left.html"></div>
+</div>
+<div class="rightCon">
+
+    <br/><br/>
+    <div id="myDataGrid" style="width:800px;height:360px" class="bjDataGrid" options="
+	     url:'../data/dataGridData.json',
+	     method: 'get',
+	">
+    </div>
+    <br/><br/>
+
+</div>
+
+
+</body>
+</html>

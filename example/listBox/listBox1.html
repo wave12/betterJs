@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<link rel="stylesheet" href="../demo.css?v6"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+
+<script type="text/javascript">
+    bj.ready(function () {
+        bj('#list2').listbox({
+           data:[
+               {"text":"item1","value":"1"},
+               {"text":"item2","value":"2"},
+               {"text":"item3","value":"3"}
+           ]
+        });
+    });
+</script>
+<body>
+
+<div class="box">
+    <div class="leftCate">
+        <div class="bjTemplate" src="../left.html"></div>
+    </div>
+    <div class="rightCon">
+
+        <div class="conTitle">listbox control</div>
+
+        <div class="con">
+
+            <h3>1.create listbox from url data:</h3>
+
+            <div id="list1" style="height:140px; width:300px" class="bjListbox" options="
+		url:'../data/listboxData.json',
+		method:'get'
+		">
+            </div>
+            <div class="codeHead">code:</div>
+            <textarea style="height: 100px"  class="code">
+<div id="list1" style="height:140px; width:300px" class="bjListbox" options="
+		url:'../data/listboxData.json',
+		method:'get'
+		">
+            </textarea>
+
+            <br><br>
+            <h3>2.create listbox by script</h3>
+            <div id="list2" style="height:140px; width:300px">
+            </div>
+
+            <div class="codeHead">code:</div>
+            <textarea style="height: 260px"  class="code">
+bj('#list2').listbox({
+     data:[
+            {"text":"item1","value":"1"},
+            {"text":"item2","value":"2"},
+            {"text":"item3","value":"3"}
+     ]
+});
+            </textarea>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

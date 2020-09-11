@@ -1,0 +1,35 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<link rel="stylesheet" href="../demo.css"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+<script type="text/javascript">
+    bj.ready(function () {
+        bjDebug = true;
+    });
+
+</script>
+<body>
+<div class="box">
+	<div class="leftCate">
+		<div class="bjTemplate" src="../left.html"></div>
+	</div>
+	<div class="rightCon">
+
+		<div class="conTitle">comboDateTime control</div>
+
+		<div class="con">
+<input id="combobox" class="bjCombobox" style="width:400px;left:50px" options="
+        listHeight:200,
+        mulSelect:false,
+        text:'NETGEAR FVS318',
+        value:'10',
+		url:'../data/listboxData.json',
+		method:'get'
+		"/>
+<br/><br/>
+		</div>
+	</div>
+</div>
+</body>
+</html>

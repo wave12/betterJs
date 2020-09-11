@@ -1,0 +1,67 @@
+[
+  {
+    "text": "Epson Table 845",
+    "value": "1",
+    "group": "Printer"
+  },
+  {
+    "text": "Canon Camero MG5320",
+    "value": "2",
+    "group": "Printer"
+  },
+  {
+    "text": "HP Deskjet 1000 Printer",
+    "value": "3",
+    "group": "Printer"
+  },
+  {
+    "text": "Cisco RV110W-A-NA-K9",
+    "value": "7",
+    "group": "Firewall"
+  },
+  {
+    "text": "ZyXEL ZyWALL USG50",
+    "value": "11",
+    "group": "Firewall"
+  },
+  {
+    "text": "NETGEAR FVS318",
+    "value": "10",
+    "group": "Firewall"
+  },
+  {
+    "text": "Logitech Keyboard K120",
+    "value": "18",
+    "group": "Keyboard"
+  },
+  {
+    "text": "Microsoft Computer 4000",
+    "value": "19",
+    "group": "Keyboard"
+  },
+  {
+    "text": "Logitech Wireless Touch Keyboard K400",
+    "value": "20",
+    "group": "Keyboard"
+  },
+  {
+    "text": "Logitech Gaming Keyboard G110",
+    "value": "21",
+    "group": "Keyboard"
+  },
+  {
+    "text": "Nikon COOLPIX L26 16.1 MP",
+    "value": "22",
+    "group": "Camera"
+  },
+  {
+    "text": "Canon PowerShot A1300",
+    "value": "25",
+    "group": "Camera"
+  },
+  {
+    "text": "Canon PowerShot A2300",
+    "value": "23",
+    "group": "Camera"
+  }
+]

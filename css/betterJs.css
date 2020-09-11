@@ -1,0 +1,1308 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Microsoft YaHei", "Trebuchets MS", Verdana;
+    font-size: 14px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+.iconAdd {
+    background: url(../images/add.png) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    top: 50%;
+    position: absolute;
+    margin-top: -8px;
+    margin-right: 16px;
+    padding-left: 4px;
+}
+
+.pageMask {
+    background: #666;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99998;
+}
+
+.bjButton {
+    background: #f6f6f6;
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.bjButtonGroup {
+    font-size: 0px;
+}
+
+.bjButtonGroup .item {
+    background: #f6f6f6;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 4px;
+    margin: 0px;
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.bjButtonGroup .item:hover {
+    background: #f0f0f0;
+}
+
+.bjButtonGroup .itemSelect {
+    background: #236CBA;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 4px;
+    margin: 0px;
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.bjButtonGroup :first-child {
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.bjButtonGroup :last-child {
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+
+.bjButtonCon {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.bjButtonIconText {
+    padding-left: 20px;
+}
+
+.bjButton:hover {
+    background: #f0f0f0;
+}
+
+/* bjCheckBox */
+.bjCheckbox {
+    display: none;
+}
+
+.checkBoxUnSel {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+
+    display: inline-block;
+    margin-right: 4px;
+    background: url(../images/checkBoxIcons.png) no-repeat -14px 0px;
+}
+
+.checkBoxSel {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url(../images/checkBoxIcons.png) no-repeat 0px 0px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+/* bjRadio */
+.bjRadio {
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+}
+
+.radioUnSel {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+
+    display: inline-block;
+    margin-right: 4px;
+    background: url(../images/buttonRadioIcons.png?6) no-repeat -14px 0px;
+}
+
+.radioSel {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url(../images/buttonRadioIcons.png?6) no-repeat 0px 0px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.bjTabs {
+}
+
+.bjTabsHead {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    white-space: nowrap;
+    /*overflow:hidden;*/
+    height: 32px;
+    line-height: 32px;
+}
+
+.bjTabsHead .tabActive .close, .bjTabsHead .tabActiveNo .close {
+    width: 16px;
+    height: 16px;
+    display: none;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-right: -4px;
+    opacity: 0.6;
+    cursor: pointer;
+    background: url(../images/winToolIcons.png) no-repeat -16px 0;
+}
+
+.bjTabsCon {
+    border: 1px solid #f0f0f0;
+    border-top: none;
+    background: #fff;
+    padding: 5px;
+}
+
+.bjTabsHead .tabActive {
+    background: #fff;
+    border: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+    padding: 0px 8px;
+    display: inline-block;
+    margin-right: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    vertical-align: middle;
+    cursor: default;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+}
+
+.bjTabsHead .tabActiveNo {
+    background: #eee;
+    border: 1px solid #eee;
+    padding: 0px 8px;
+    margin-right: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    vertical-align: middle;
+    cursor: default;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 30px;
+    position: relative;
+}
+
+/*
+.bjTabs div:first-child
+{ 
+   background:#f3f3f3;
+}
+*/
+
+.bjListbox {
+    border: 1px solid #eee;
+    overflow: auto;
+}
+
+.bjListboxCon {
+    list-style-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bjListboxCon li {
+    padding: 2px 4px;
+}
+
+.bjListboxCon li:hover {
+    background: #eee;
+}
+
+.bjListboxCon .listItemSel {
+    background: #ddd;
+}
+
+.bjListboxCon .listItemUnSel {
+    background: #fff;
+}
+
+/* bjTree style */
+.bjTree {
+    border: 1px solid #eee;
+    overflow: auto;
+    padding: 0px 0px;
+}
+
+.bjTreeCon {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bjTreeCon ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bjTreeCon div {
+    height: 30px;
+    line-height: 30px;
+    vertical-align: center;
+}
+
+.treeText {
+    vertical-align: top;
+    padding-left: 2px;
+}
+
+.treeExpanded {
+    background: url(../images/treeIcons.png) no-repeat -18px 0px;
+    width: 14px;
+    height: 18px;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.treeCollapsed {
+    background: url(../images/treeIcons.png) no-repeat 0px 0px;
+    margin-top: 3px;
+    width: 14px;
+    height: 18px;
+    display: inline-block;
+}
+
+.treeFolderClose {
+    width: 16px;
+    height: 24px;
+    display: inline-block;
+    background: url(../images/treeIcons.png) no-repeat -208px 6px;
+}
+
+.treeFolderOpen {
+    width: 16px;
+    height: 24px;
+    display: inline-block;
+    background: url(../images/treeIcons.png) no-repeat -224px 6px;
+}
+
+.treeSubNodeIcon {
+    width: 16px;
+    height: 24px;
+    display: inline-block;
+    background: url(../images/treeIcons.png) no-repeat -240px 6px;
+}
+
+.treeIndent {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.bjTreeCon div:hover {
+    background: #eee;
+}
+
+.bjTreeCon .treeItem {
+    /*background: #f0f0f0;*/
+    padding: 0px 4px;
+    height: 100%;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: default;
+}
+
+/* bgDataGrid */
+.bjDataGrid {
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.bjDataGridColumn {
+    height: 36px;
+    background: -moz-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #f3f3f3));
+    background: -webkit-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: -o-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: -ms-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: linear-gradient(to bottom, #f9f9f9 0%, #f3f3f3 100%);
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bjDataGridColumnTable {
+    border-collapse: collapse;
+    width: 1200px;
+    position: absolute;
+    color: #999;
+    table-layout: fixed;
+}
+
+.columnTr {
+    height: 35px;
+}
+
+
+.bjDataGridCon {
+    position: absolute;
+    top: 36px;
+    overflow: auto;
+    /*-webkit-overflow-scrolling: touch;*/
+    width: 100%;
+}
+
+.bjDataGridCon .tableData {
+    border-collapse: collapse;
+    width: 1200px;
+    /*position:absolute;*/
+    table-layout: fixed;
+    margin-bottom: 50px;
+}
+
+.bjDataGrid td {
+
+
+    padding: 0px;
+    border-bottom: 1px dotted #ccc;
+    border-right: 1px dotted #ccc;
+
+    text-align: left;
+}
+
+.columnHeadCell {
+    width: 24px;
+    text-align: center;
+}
+
+.bjDataGrid .rowNumber {
+    background: #f6f6f6;
+    text-align: center;
+    width: 24px;
+}
+
+.bjDataGrid .cellCon {
+    padding: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bjDataGrid .dataRow {
+    background: #fff;
+}
+
+.bjDataGrid .dataRowSep {
+    background: #f9f9f9;
+}
+
+.bjDataGrid .dataRowHover {
+    background: #FBB60F;
+}
+
+.bjDataGrid .bjDataGridPager {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #f6f6f6;
+    border-top: 1px solid #f0f0f0;
+}
+
+.bjDataGrid .bjDataGridPager table {
+    width: 100%;
+    height: 36px;
+
+    padding-top: 1px;
+}
+
+.bjDataGrid .bjDataGridPager td {
+    border: none;
+
+}
+
+.bjDataGrid .bjDataGridPager .pageArrow {
+    width: 24px;
+    text-align: center;
+}
+
+.bjDataGrid .bjDataGridPager .pageFirst {
+    width: 16px;
+    height: 16px;
+    background: url(../images/pagerIcons.png) no-repeat 0 center;
+    display: inline-block;
+}
+
+.bjDataGrid .bjDataGridPager .pagePre {
+    width: 16px;
+    height: 16px;
+    background: url(../images/pagerIcons.png) no-repeat -16px center;
+    display: inline-block;
+}
+
+.bjDataGrid .bjDataGridPager .arrowFrame:hover {
+    background: #eee;
+    padding: 3px;
+}
+
+.bjDataGrid .bjDataGridPager .pageNum {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #f3f3f3;
+    text-align: center;
+}
+
+.bjDataGrid .bjDataGridPager .pageSizeList {
+    width: auto;
+    height: 24px;
+    border: 1px solid #f3f3f3;
+    text-align: center;
+}
+
+.bjDataGrid .bjDataGridPager .pageNext {
+    width: 16px;
+    height: 16px;
+    background: url(../images/pagerIcons.png) no-repeat -32px center;
+    display: inline-block;
+}
+
+.bjDataGrid .bjDataGridPager .pageLast {
+    width: 16px;
+    height: 16px;
+    background: url(../images/pagerIcons.png) no-repeat -48px center;
+    display: inline-block;
+}
+
+.bjDataGrid .sortIcon {
+    display: inline;
+    padding: 0 18px 0 0;
+    background: url(../images/dataGridIcons.png) no-repeat -64px center;
+}
+
+.bjDataGrid .sortIconDesc {
+    display: inline;
+    padding: 0 18px 0 0;
+    background: url(../images/dataGridIcons.png) no-repeat -16px center;
+}
+
+.bjDataGrid .sortIconAsc {
+    display: inline;
+    padding: 0 18px 0 0;
+    background: url(../images/dataGridIcons.png) no-repeat 0 center;
+}
+
+/* drawerMenu style */
+.bjDrawerMenu {
+    border: 1px solid #ddd;
+}
+
+.bjDrawerMenu .cateHead {
+    height: 28px;
+    line-height: 28px;
+    background: #f3f3f3;
+    border-top: 0px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.bjDrawerMenu .cateTitle {
+    padding-left: 5px;
+}
+
+.bjDrawerMenu .cateCon {
+    padding: 0px 4px;
+}
+
+.downArrow {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    background: url(../images/upDownArrows.png) no-repeat -16px 0;
+}
+
+.upArrow {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    background: url(../images/upDownArrows.png) no-repeat 0 0;
+}
+
+/* dialog style */
+.bjDialog {
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-box-shadow: #666 0px 0px 5px;
+    -moz-box-shadow: #666 0px 0px 5px;
+    box-shadow: #666 0px 0px 5px;
+    display:none;
+    z-index: 10000;
+}
+
+.bjDialogHead {
+    height: 36px;
+    line-height: 36px;
+    background: -moz-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #f3f3f3));
+    background: -webkit-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: -o-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: -ms-linear-gradient(top, #f9f9f9 0%, #f3f3f3 100%);
+    background: linear-gradient(to bottom, #f9f9f9 0%, #f3f3f3 100%);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: left;
+}
+
+.bjDialogTitle {
+    padding-left: 8px;
+}
+
+.bjDialogCon {
+    padding: 15px 10px;
+}
+
+.bjDialog .close {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: right;
+    margin-top: 9px;
+    margin-right: 8px;
+    opacity: 0.6;
+    background: url(../images/winToolIcons.png) no-repeat -16px 0;
+}
+
+.bjDialog .close:hover {
+    background: url(../images/winToolIcons.png) no-repeat -16px 0;
+    background-color: #999999;
+}
+
+.bjDialog .buttonRow {
+    /*position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 20px auto;
+    margin-bottom: 10px;*/
+
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background-color: #f6f6f6;
+    text-align: right;
+
+}
+
+.bjDialog .buttonRow span {
+    margin:5px 10px;
+}
+
+.bjDialogConfirmRow {
+    position: absolute;
+    bottom: 0px;
+    height: 36px;
+    line-height: 36px;
+    width: 100%;
+    background-color: #f3f3f3;
+    text-align: right;
+    clear: both;
+}
+
+/* bjComboPanel style */
+.bjComboPanel {
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.comboArrow {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    background: url(../images/upDownArrows.png) no-repeat -16px 0;
+    opacity: 0.7;
+}
+
+.comboArrow:hover {
+    opacity: 1.0;
+}
+
+/* bjComboTree style */
+.bjComboTree {
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/* bjCombobox style */
+.bjCombobox {
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+
+.bjCombobox span:first-child {
+    vertical-align: middle;
+    padding-left: 2px;
+    height: 28px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: calc(100% - 24px);
+}
+
+.bjCombobox ul {
+    list-style-type: none;
+}
+
+/* bjDateTime style */
+.bjDateTime {
+    border: 1px solid #ddd;
+    width: 240px;
+}
+
+.bjDateTime .head {
+    height: 24px;
+    line-height: 24px;
+    display: table;
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+}
+
+.bjDateTime .title {
+    text-align: center;
+    display: table-cell;
+}
+
+.bjDateTime .preYear {
+    background: url(../images/dateTimeIcons.png) no-repeat 0px 4px;
+    width: 16px;
+    height: 16px;
+    display: table-cell;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.bjDateTime .preYear:hover {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    opacity: 1.0;
+}
+
+.bjDateTime .preMonth {
+    background: url(../images/dateTimeIcons.png) no-repeat -16px 4px;
+    width: 16px;
+    height: 16px;
+    display: table-cell;
+    opacity: 0.7;
+}
+
+.bjDateTime .preMonth:hover {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    opacity: 1.0;
+}
+
+.bjDateTime .nextYear {
+    background: url(../images/dateTimeIcons.png) no-repeat -48px 4px;
+    width: 16px;
+    height: 16px;
+    display: table-cell;
+    margin-left: 8px;
+    opacity: 0.7;
+}
+
+.bjDateTime .nextYear:hover {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    opacity: 1.0;
+}
+
+.bjDateTime .nextMonth {
+    background: url(../images/dateTimeIcons.png) no-repeat -32px 4px;
+    width: 16px;
+    height: 16px;
+    display: table-cell;
+    opacity: 0.7;
+}
+
+.bjDateTime .nextMonth:hover {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    opacity: 1.0;
+}
+
+.bjDateTime .sep {
+    width: 8px;
+    display: table-cell;
+}
+
+.bjDateTime .tblDay {
+    width: calc(100% - 4px);
+    margin: 5px 2px 8px 2px;
+}
+
+.bjDateTime .tblDay tr {
+    height: 28px;
+    line-height: 28px;
+}
+
+.bjDateTime .thisMonthDay {
+    text-align: center;
+}
+
+.bjDateTime .otherMonthDay {
+    text-align: center;
+    color: #999;
+}
+
+.bjDateTime .selectDay {
+    background-color: #eee;
+    text-align: center;
+}
+
+.bjDateTime .thisMonthDay:hover, .otherMonthDay:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.bjDateTime .time {
+    padding: 5px 8px 10px 8px;
+    text-align: center;
+}
+
+.bjDateTime .hms {
+    width: 40px;
+    margin-left: 4px;
+    margin-right: 8px;
+    outline: none;
+    border: 1px solid #eee;
+}
+
+/* bjComboDateTime style */
+.bjComboDateTime {
+    height: 28px;
+    line-height: 28px;
+    display: table;
+    border: 1px solid #ddd;
+}
+
+.bjComboDateTime .iconDateTime {
+    width: 16px;
+    height: 16px;
+    background: url(../images/dateTimeIcons.png) no-repeat -64px 5px;
+    padding-right: 5px;
+    display: table-cell;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.bjComboDateTime .iconDateTime:hover {
+    opacity: 1.0;
+}
+
+/* bjTooltip style */
+.bjTooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.bjTooltipCon {
+    display: none;
+    border: 1px solid #ddd;
+    padding: 3px 4px;
+    position: absolute;
+    border-radius: 4px;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+.arrowBottom {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ccc;
+    position: absolute;
+    margin: 5px auto;
+    display: none;
+    float: left;
+    top: -20px;
+    z-index: 9999;
+}
+
+.arrowBottom span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff; /* arrow background */
+    position: absolute;
+    left: -7px;
+    top: 1px;
+
+}
+
+.arrowTop {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ccc;
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    /*background-color: #fff;*/
+}
+
+.arrowTop span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    position: absolute;
+    left: -7px;
+    top: -8px;
+}
+
+.arrowLeft {
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-left: 8px solid #ccc;
+    position: absolute;
+    top: 10px;
+    display: none;
+    z-index: 9999;
+}
+
+.arrowLeft span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-left: 7px solid #fff;
+    position: absolute;
+    left: -8px;
+    top: -7px;
+}
+
+.arrowRight {
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #ccc;
+    position: absolute;
+    top: 10px;
+    display: none;
+    z-index: 9999;
+}
+
+.arrowRight span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #fff;
+    position: absolute;
+    left: 1px;
+    top: -7px;
+}
+
+/* bjProgressBar style */
+.bjProgressbar {
+    border: 1px solid #ddd;
+    position: relative;
+    border-radius: 4px;
+    height: 20px;
+}
+
+.bjProgressbar .progressBackground {
+    background-color: #ccc;
+    display: block;
+    height: 100%;
+    position: absolute;
+}
+
+.bjProgressbar .progressText {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+}
+
+/* bjSliderBar style */
+.bjSliderBar {
+    border: 1px solid #ddd;
+    position: relative;
+    border-radius: 4px;
+    height: 6px;
+}
+
+.bjSliderBar .block1 {
+    border-radius: 8px;
+    height: 16px;
+    width: 16px;
+    background-color: #99f;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -8px;
+}
+
+.bjSliderBar .block1Text {
+    position: absolute;
+    top: -25px;
+    left: -8px;
+    width: auto;
+}
+
+/* popupMenu style */
+.bjPopupMenu {
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    line-height: 24px;
+    display: none;
+    position: absolute;
+    min-width: 200px;
+}
+
+.bjPopupMenu ul {
+    list-style-type: none;
+}
+
+.bjPopupMenu li {
+    padding: 2px 4px;
+    position: relative;
+}
+
+.bjPopupMenu li:hover {
+    background-color: #f0f0f0;
+}
+
+.menuArrow {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../images/toRightArrow.png) no-repeat 0px 0px;
+}
+
+.menuSub {
+    position: absolute;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    line-height: 24px;
+    background-color: #fff;
+    min-width: 200px;
+    z-index: 9999;
+    display: none;
+}
+
+.menuSub li {
+    padding: 2px 4px;
+    position: relative;
+}
+
+/* bjPanelMenu style */
+.bjPanelMenuCon {
+    position: absolute;
+    z-index: 9999;
+    float: left;
+    position: absolute;
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    background-color: #fff;
+    display: none;
+}
+
+.bjPanelMenuCon div {
+    width: 200px;
+}
+
+.bjPanelMenuHead {
+    padding: 0px;
+    padding-left: 0px;
+}
+
+.bjPanelMenuHead .menuActive {
+    background: #fff;
+    padding: 5px 8px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.bjPanelMenuHead .menuActiveNo {
+    padding: 5px 8px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* menu style */
+.bjMenu {
+    border-radius: 0px;
+    line-height: 24px;
+    display: inline-block;
+}
+
+.bjMenuCon {
+    z-index: 9999;
+    float: left;
+    position: absolute;
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    background-color: #fff;
+    display: none;
+}
+
+.bjMenuHead {
+    padding: 0px;
+    padding-left: 0px;
+}
+
+.bjMenuHead .menuActive {
+    background: #fff;
+    padding: 5px 8px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.bjMenuHead .menuActiveNo {
+    padding: 5px 8px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.bjMenu ul {
+    list-style-type: none;
+}
+
+.bjMenu li {
+    padding: 2px 4px;
+    min-width: 200px;
+    position: relative;
+}
+
+.bjMenu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* bjNumberBox style */
+.bjNumberBoxContainer {
+    border: 1px solid #eee;
+    display: inline-block;
+    position: relative;
+    height: 28px;
+    width: 60px;
+}
+
+.bjNumberBox {
+    border: none;
+    width: 40px;
+    height: 100%;
+    outline: none;
+    padding: 0px 2px;
+}
+
+.bjNumberBoxContainer .udBack {
+    width: 16px;
+    height: 100%;
+    display: inline-block;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.bjNumberBoxContainer .nbUp {
+    width: 16px;
+    height: 14px;
+    background: url(../images/numberBoxIcons.png) no-repeat 0 center;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #f0f0f0;
+}
+
+.bjNumberBoxContainer .nbDown {
+    width: 16px;
+    height: 14px;
+    background: url(../images/numberBoxIcons.png) no-repeat -16px center;
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #f0f0f0;
+}
+
+/* bjInput */
+.bjInput {
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    border: 1px solid #ddd;
+}
+
+/* bjBanner */
+.bjBanner {
+    position: relative;
+    display: block;
+}
+
+.bjBanner div:nth-child(n) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+
+.bjBanner div:first-child {
+    opacity: 1;
+}
+
+/* bjPager style */
+.bjPager{
+	line-height:28px;
+}
+.bjPager .pageNoActive{
+	border:#999999 solid 0px;
+	padding:0px 4px;
+	height:28px;
+	float:left; 
+	margin-left:10px;
+	cursor:pointer;
+}
+
+.bjPager .pageNoActiveNo{
+	border:#999999 solid 1px;
+	padding:0px 4px;
+	height:28px;
+	float:left; 
+	margin-left:10px;
+	cursor:pointer;
+} 
+
+.bjPager .pageHead{
+	border:#999999 solid 1px;
+	padding:0px 4px;
+	height:28px;
+	float:left; 
+	margin-left:10px;
+	cursor:pointer;
+}
+.bjPager .pageTail{
+	border:#999999 solid 1px;
+	padding:0px 4px;
+	height:28px;
+	float:left; 
+	margin-left:10px;
+	cursor:pointer;
+}
+.bjPager .pagePre{
+	border:#999999 solid 1px;
+	padding:0px 4px;	
+	height:28px;
+	float:left; 
+	margin-left:10px;
+	cursor:pointer;
+}
+.bjPager .pageNext{
+	border:#999999 solid 1px;
+	padding:0px 4px;
+	height:28px;
+	float:left; 
+	margin-left:10px;
+	cursor:pointer;
+}
+
+.bjPager .go{ 
+	padding:0px 4px;
+	height:28px;
+	float:left; 
+	margin-left:5px;
+	border:#999999 solid 1px; 
+	cursor:pointer;
+}
+
+.bjPager .goInput{
+	padding:0px 4px;
+	height:28px;
+	float:left; 
+	margin-left:10px;
+	width:50px;
+}

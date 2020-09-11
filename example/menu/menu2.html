@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="../../css/betterJs.css"></link>
+    <script type="text/javascript" src="../../betterJs.js"></script>
+    <link rel="stylesheet" href="../demo.css"></link>
+    <script type="text/javascript">
+
+
+        bj.ready(function () {
+            bjDebug = true;
+
+            bj('#bjMenu').menu('show', {});
+
+
+        });
+
+    </script>
+    <body>
+
+
+        <div class="box">
+            <div class="leftCate">
+                <div class="bjTemplate" src="../left.html"></div>
+            </div>
+            <div class="rightCon">
+
+                <div class="conTitle">menu控件</div>
+
+                <div class="con">
+
+                    <br/>在空白处右键单击，会出现弹出菜单
+                    <br/>
+                    <br/>
+                    <div id="bjMenu" class="bjPopupMenu" style="" options="">
+                        <ul>
+                            <li>item1</li>
+                            <li>
+                                item2
+                                <ul>
+                                    <li>
+                                        <a href="http://www.baidu.com">item2_1</a>
+                                    </li>
+                                    <li>item2_2</li>
+                                    <li>item2_3
+                                        <ul>
+                                            <li>item2_3_1</li>
+                                            <li>item2_3_2</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>item3</li>
+                            <li>item4</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+    </body>
+</html>

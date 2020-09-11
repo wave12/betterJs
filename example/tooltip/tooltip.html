@@ -1,0 +1,44 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<link rel="stylesheet" href="../demo.css"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+<script type="text/javascript">
+    bj.ready(function () {
+
+        bjDebug = true;
+
+    });
+
+</script>
+<body>
+
+<div class="box">
+    <div class="leftCate">
+        <div class="bjTemplate" src="../left.html"></div>
+    </div>
+    <div class="rightCon">
+
+        <div class="conTitle">tooltip control</div>
+
+        <div class="con">
+
+<div class="bjTooltip" title="this is tooltip<br> content!"
+     style="width:400px;height:100px; background-color:#eee; margin-left:200px"
+     options="position:'right'">
+
+    tooltip name
+
+</div>
+
+
+<input class="bjTooltip" title="this is tooltip<br> content2!" value="info"
+       style="width:400px;height:40px; line-height:40px; margin-top:50px; margin-left:200px"
+       options="position:'top'">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

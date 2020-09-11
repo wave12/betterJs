@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<link rel="stylesheet" href="../demo.css?v6"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+
+<script type="text/javascript">
+    betterJs.onReady(function () {
+        bj('p').css('color', '#0f0');
+        bj('h2').css({'color': '#0f0', 'border': '1px solid #00f'});
+        bj('p').setEvent('click', function () {
+            alert('click');
+        });
+
+        bj('#btnNormal').setEvent('click', function () {
+            alert('click button');
+        });
+
+        bj('#btn3').setEvent('click', function () {
+            alert('click button3');
+        });
+
+    });
+
+    betterJs.onReady(function () {
+        alert('ready2');
+    });
+</script>
+<body>
+
+<div class="box">
+    <div class="leftCate">
+        <div class="bjTemplate" src="../left.html"></div>
+    </div>
+    <div class="rightCon">
+
+        <div class="conTitle">基础控件</div>
+
+        <div class="con">
+            <h2 class="ti" id="ti">Hello World1!</h2>
+            <h2 class="ti2" id="ti">Hello World2!</h2>
+
+            <p>dfdsf</p>
+
+            <div id="btnNormal" class="bjButton">普通按钮</div>
+            <div class="bjButton" options="iconClass:'iconAdd'">普通图标按钮</div>
+            <div style="width:200px" class="bjButton" options="iconClass:'iconAdd'">普通图标按钮2</div>
+
+
+            <br/><br/>
+            <div class="bjButtonGroup" options="{itemSep:5}">
+                <div options="iconClass:'iconAdd'">button1</div>
+                <div title="button2">button2</div>
+                <div id="btn3">button3</div>
+            </div>
+
+            <br/>
+            <span class="bjCheckBox" options="label:'篮球', checked:true">eee</span>
+            <span class="bjCheckBox" options="label:'足球', checked:true">eee</span>
+
+            <br/>
+            <span class="bjButtonRadio" options="label:'初中', name:'school'">初中</span>
+            <span class="bjButtonRadio" options="label:'高中', name:'school', checked:true">高中</span>
+            <span class="bjButtonRadio" options="label:'大学', name:'school'">大学</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="bjButtonRadio" options="label:'男', name:'sex', value:1"><span>1</span></span>
+            <span class="bjButtonRadio" options="label:'女', name:'sex', value:2, checked:true">2</span>
+
+            <br/><br/>
+            <div class="bjTabs" options="itemSep:5,actionType:2">
+                <div title="tab1">这里是tab1内容</div>
+                <div title="tab2">tab2<p>ceshi</p></div>
+                <div title="tab3">tab3</div>
+            </div>
+
+            <br/><br/>
+
+            <div style="height:140px" class="bjListBox" options="
+			url:'../data/listBoxData.json',
+			method:'get'
+			">
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

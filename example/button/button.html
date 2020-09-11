@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+<link rel="stylesheet" href="../demo.css?v6"></link>
+
+<script type="text/javascript">
+    bj.ready(function () {
+        bj('#btnNormal').event('click', function () {
+            alert('click button');
+        });
+
+        bj('#btnIcon').event('click', function () {
+            alert('this is button with icon');
+        });
+
+        bj('#btnIcon2').event('click', function () {
+            alert('this is button with icon too');
+        });
+
+        bj('#btnIcon3').event('click', function () {
+            alert('this is button with only icon');
+        });
+
+        bj('#btn3').event('click', function () {
+            alert('click button3');
+        });
+
+    });
+
+    bj.ready(function () {
+        //alert('ready2');
+    });
+</script>
+<body>
+
+<div class="box">
+    <div class="leftCate">
+        <div class="bjTemplate" src="../left.html"></div>
+    </div>
+    <div class="rightCon">
+
+        <div class="conTitle">button control</div>
+
+        <div class="con">
+
+
+            <div id="btnNormal" class="bjButton">normal button</div>
+            <div id="btnIcon" class="bjButton" options="iconClass:'iconAdd'">icon button</div>
+            <div id="btnIcon2" style="width:200px" class="bjButton" options="iconClass:'iconAdd'">icon button2</div>
+            <div id="btnIcon3" class="bjButton" options="iconClass:'iconAdd'"></div>
+            <div class="codeHead">code:</div>
+            <textarea style="height: 100px" class="code">&lt;div id="btnNormal" class="bjButton"&gt;normal button&lt;/div&gt;&#10;&lt;div id="btnIcon" class="bjButton" options="iconClass:'iconAdd'">icon button&lt;/div&gt;&#10;&lt;div id="btnIcon2" style="width:200px" class="bjButton" options="iconClass:'iconAdd'"&gt;icon button2&lt;/div&gt;&#10;&lt;div id="btnIcon3" class="bjButton" options="iconClass:'iconAdd'"&gt;&lt;/div&gt;</textarea>
+
+            <br/><br/>
+
+            <div class="bjButtonGroup" options="{itemSep:5}">
+                <div options="iconClass:'iconAdd'">button1</div>
+                <div title="button2">button2</div>
+                <div id="btn3">button3</div>
+            </div>
+            <div class="codeHead">code:</div>
+            <textarea style="height: 100px" class="code">&lt;div class="bjButtonGroup" options="{itemSep:5}"&gt;&#10;&nbsp;&nbsp;&lt;div options="iconClass:'iconAdd'"&gt;button1&lt;/div&gt;&#10;&nbsp;&nbsp;&lt;div title="button2"&gt;button2&lt;/div&gt;&#10;&nbsp;&nbsp;&lt;div id="btn3"&gt;button3&lt;/div&gt;&#10;&lt;/div&gt;</textarea>
+
+        </div>
+    </div>
+
+</body>
+</html>
