@@ -32,4 +32,4 @@ You need to adjust to the actual path of your project.
 
 ## 2. ui control snapshot
 ### (1). button
-![button controll](https://github.com/wave12/betterJs/snapshot/button.png)
+![button controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/button.png)
