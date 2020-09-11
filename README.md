@@ -43,3 +43,5 @@ Better JS refers to some of jQuery's advantages and implements some excellent fu
 
 ### (4). datagrid
 ![datagrid controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/datagrid.png)
+
+For more features, please download the entire package and refer to our example.
