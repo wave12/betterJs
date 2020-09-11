@@ -10,7 +10,7 @@ This is a lightweight overall solution for the web front end that does not rely 
 </pre>
 You need to adjust to the actual path of your project.
 
-### (2). Writing your scripts in bj.ready(...)
+### (2). Write your scripts in bj.ready(...)
 <pre>
  bj.ready(function () {
         bj('p').css('color', '#0f0');
