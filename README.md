@@ -29,6 +29,7 @@ You need to adjust to the actual path of your project.
 
  });
 </pre>
+Better JS refers to some of jQuery's advantages and implements some excellent functions. Using BJ is just like jQuery's $.
 
 ## 2. ui control snapshot
 ### (1). button
