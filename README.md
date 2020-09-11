@@ -42,4 +42,4 @@ Better JS refers to some of jQuery's advantages and implements some excellent fu
 ![dialog controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/dialog.png)
 
 ### (4). datagrid
-![datagride controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/datagrid.png)
+![datagrid controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/datagrid.png)
