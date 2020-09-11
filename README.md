@@ -1,7 +1,7 @@
 # betterJs
 This is a lightweight overall solution for the web front end that does not rely on any other third-party framework, such as jQuery. This framework is built with native JavaScript, including UI components, DOM operations and other common function operations. The whole code is very small and has excellent performance.
 
-## 1.How to use it
+## 1. How to use it
 
 ### (1). Add CSS and JS files to the web page, such as:
 <pre>
@@ -29,4 +29,7 @@ You need to adjust to the actual path of your project.
 
  });
 </pre>
+
+## 2. ui control snapshot
+### (1). button
 
