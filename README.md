@@ -8,6 +8,7 @@ How to use it
 <link rel="stylesheet" href="./css/betterJs.css"></link> 
 </code></pre>
 <pre>
+<link rel="stylesheet" href="./css/betterJs.css"/>
 <script type="text/javascript" src="./betterJs.js"></script>
 </pre>
 
