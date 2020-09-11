@@ -32,4 +32,4 @@ You need to adjust to the actual path of your project.
 
 ## 2. ui control snapshot
 ### (1). button
-
+![button controll](/snapshot/button.png)
