@@ -10,12 +10,12 @@ This is a lightweight overall solution for the web front end that does not rely 
 </pre>
 You need to adjust to the actual path of your project.
 
-### (2). In the bj.ready Writing scripts in it
+### (2). Writing your scripts in bj.ready(...)
 <pre>
  bj.ready(function () {
         bj('p').css('color', '#0f0');
         bj('h2').css({'color': '#0f0', 'border': '1px solid #00f'});
-        bj('p').setEvent('click', function () {
+        bj('p').event('click', function () {
             alert('click');
         });
 
