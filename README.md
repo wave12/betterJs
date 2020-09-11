@@ -6,16 +6,12 @@ How to use it
 1. Add CSS and JS files to the web page, such as:
 <code>
 &lt;link rel="stylesheet" href="./css/betterJs.css"&gt;&lt;/link&gt; 
+&lt;script type="text/javascript" src="./betterJs.js"&gt;&lt;/script&gt; 
 </code>
-<pre>
-<link rel="stylesheet" href="./css/betterJs.css"/>
-<script type="text/javascript" src="./betterJs.js"></script>
-</pre>
-
 You need to adjust to the actual path of your project.
 
 2. In the bj.ready Writing scripts in it
-<pre>
+<code>
  bj.ready(function () {
         bj('p').css('color', '#0f0');
         bj('h2').css({'color': '#0f0', 'border': '1px solid #00f'});
@@ -32,5 +28,5 @@ You need to adjust to the actual path of your project.
         });
 
  });
-</pre>
+</code>
 
