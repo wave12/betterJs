@@ -6,6 +6,8 @@ How to use it
 1. Add CSS and JS files to the web page, such as:
 <pre>
 <link rel="stylesheet" href="../../css/betterJs.css"></link> 
+</pre>
+<pre>
 <script type="text/javascript" src="../../betterJs.js"></script>
 </pre>
 
