@@ -10,6 +10,11 @@ html, body {
     padding: 0px;
 }
 
+input{
+    height: 20px;
+    line-height: 20px;
+}
+
 table {
     font-size: 14px;
     border-collapse: collapse;

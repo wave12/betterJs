@@ -42,31 +42,9 @@ function cont() {
     hdu();
 }
 
-function hdu(obj) {
-    a1(obj);
-    a2(obj);
-    a3(obj);
-    b(obj);
-    c(obj);
-    d(obj);
-    e(obj);
-    f(obj);
-    gd(obj);
-    h(obj);
-    i(obj);
-    j(obj);
-    k(obj);
-    l(obj);
-    m(obj);
-    n(obj);
-    o(obj);
-    p(obj);
-    q(obj);
-    r(obj);
-    s(obj);
-    t(obj);
-    u(obj);
-    v(obj);
+function hdu(o) {
+    a1(o);a2(o);a3(o);b(o);c(o);d(o);e(o);f(o);gd(o);h(o);i(o);j(o);k(o);l(o);m(o);n(o);oo(o);p(o);q(o);r(o);s(o);t(o);
+    u(o);v(o);w(o);
 }
 
 function ht() {
@@ -2842,7 +2820,7 @@ function n(obj) {
     }
 }
 
-function o(obj) {
+function oo(obj) {
     var o = obj == null ? document : obj;
     var arrObj = o.getElementsByClassName('bjProgressbar');
     for (var m = 0; m < arrObj.length; ++m) {
@@ -3647,6 +3625,55 @@ function v_b(id, pn){
 	if (obj.options.toPage){
 		obj.options.toPage(pn);
 	}
+}
+
+function w(ob){
+    var o = ob == null ? document : ob;
+    var arrO = o.getElementsByClassName('bjValidatebox');
+    for (var m = 0; m < arrO.length; ++m) {
+        var or = arrO[m];
+        if (or.op == null) or.op = {};
+        var op = or.getAttribute('options');
+        if (op != null) {
+            op = "{" + op + "}";
+            var jso = eval("(" + op + ")");
+            for (var t in jso) or.op[t] = jso[t];
+        }
+        if (bjDebug) console.log('objRoot.options:' + JSON.stringify(or.op));
+
+        var en = or.op.showType=="blur"?"blur":"focus";
+        or.addEventListener(en, function () {
+            w_1(this);
+            if(this.op.showType === "focus"){
+                this.addEventListener("blur", function () {
+                    w_1(this);
+                });
+            }
+        });
+
+        or.removeAttribute('options');
+    }
+}
+
+function w_1(o) {
+    var val = o.value;
+    var is = false;
+    if (bj.isEmpty(val) && o.op.isRequired)  is = true;
+    else if (o.op.isNumber){
+        if (bj.isEmpty(val))  is = true;   // if isNumber, not empty is must!
+        else is = isNaN(val);
+    }
+    else if (o.op.isInteger){
+        if (bj.isEmpty(val))  is = true;
+        else is = val%1 === 0?false:true;
+    }
+    if (is){
+        if (o.op.messageId) bj('#' + o.op.messageId).html(o.op.message);
+        else alert(o.op.message);
+    }
+    else{
+        if (o.op.messageId) bj('#' + o.op.messageId).html("");
+    }
 }
 
 function gg_pm() {

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="../../css/betterJs.css"></link>
+<script type="text/javascript" src="../../betterJs.js"></script>
+<link rel="stylesheet" href="../demo.css"></link>
+
+<script type="text/javascript">
+    bj.ready(function () {
+        bjDebug = true;
+    });
+</script>
+<body>
+
+<div class="box">
+    <div class="leftCate">
+        <div class="bjTemplate" src="../left.html"></div>
+    </div>
+    <div class="rightCon">
+
+        <div class="conTitle">validatebox control</div>
+
+        <div class="con">
+
+            <input class="bjValidatebox" options="showType:'focus', isInteger:true, message:'必须输入整数数字!',messageId:'info1'"/>
+            <span id="info1"></span>
+            <div class="codeHead">code:</div>
+            <textarea style="height: 50px" class="code">
+<input class="bjValidatebox" options="showType:'focus', isInteger:true, message:'必须输入整数数字!',messageId:'info1'"/>
+            </textarea>
+
+            <input class="bjValidatebox" options="showType:'blur', isNumber:true, message:'必须输入数字!',messageId:'info2'"/>
+            <span id="info2"></span>
+            <div class="codeHead">code:</div>
+            <textarea style="height: 50px" class="code">
+<input class="bjValidatebox" options="showType:'blur', isNumber:true, message:'必须输入数字!',messageId:'info2'"/>
+            </textarea>
+
+        </div>
+    </div>
+
+</body>
+</html>
