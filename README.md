@@ -33,3 +33,6 @@ You need to adjust to the actual path of your project.
 ## 2. ui control snapshot
 ### (1). button
 ![button controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/button.png)
+
+### (2). tree
+![button controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/tree.png)
