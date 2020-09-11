@@ -5,7 +5,7 @@ How to use it
 
 1. Add CSS and JS files to the web page, such as:
 <code>
-<link rel="stylesheet" href="./css/betterJs.css"></link> 
+&lt;link rel="stylesheet" href="./css/betterJs.css"&gt;&lt;/link&gt; 
 </code>
 <pre>
 <link rel="stylesheet" href="./css/betterJs.css"/>
