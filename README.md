@@ -35,4 +35,10 @@ You need to adjust to the actual path of your project.
 ![button controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/button.png)
 
 ### (2). tree
-![button controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/tree.png)
+![tree controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/tree.png)
+
+### (3). dialog
+![dialog controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/dialog.png)
+
+### (4). datagrid
+![datagride controll](https://raw.githubusercontent.com/wave12/betterJs/master/snapshot/datagrid.png)
