@@ -12,7 +12,7 @@ How to use it
 You need to adjust to the actual path of your project.
 
 2. In the bj.ready Writing scripts in it
-'''
+<pre>
  bj.ready(function () {
         bj('p').css('color', '#0f0');
         bj('h2').css({'color': '#0f0', 'border': '1px solid #00f'});
@@ -29,5 +29,5 @@ You need to adjust to the actual path of your project.
         });
 
  });
- '''
+</pre>
 
