@@ -47,4 +47,4 @@ BetterJS refers to some of jQuery's advantages and implements some excellent fun
 For more features, please download the entire package and refer to our example.
 
 ## 3. online demo
-  You can go to our website to see <a target="_blank"  href="http://www.wave12.com/betterJs/example/base/index.html">online demo</a>.
+  You can go to our website to see <a target="_blank"  href="http://www.wave12.com/betterJs/example/introduce/index.html">online demo</a>.
