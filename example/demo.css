@@ -65,3 +65,7 @@ html, body {
     font-family: Verdana;
     font-size: 12px;
 }
+
+.uiRow div{
+    padding-left: 30px;
+}

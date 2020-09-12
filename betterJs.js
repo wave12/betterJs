@@ -44,7 +44,7 @@ function cont() {
 
 function hdu(o) {
     a1(o);a2(o);a3(o);b(o);c(o);d(o);e(o);f(o);gd(o);h(o);i(o);j(o);k(o);l(o);m(o);n(o);oo(o);p(o);q(o);r(o);s(o);t(o);
-    u(o);v(o);w(o);
+    u(o);v(o);w(o);x(o);
 }
 
 function ht() {
@@ -578,8 +578,9 @@ function d(obj) {
         var options = objRoot.getAttribute('options');
         var arrChildNodes = objRoot.children;
         console.log('arrChildNodes.length:' + arrChildNodes.length);
-        for (var k = 0; k < arrChildNodes.length; ++k) {
-            var opts = arrChildNodes[k].getAttribute('options');
+        for (var k = 0; k < objRoot.children.length; k = k + 2) {
+            var curNode = arrChildNodes[k];
+            var opts = curNode.getAttribute('options');
             var expand = false;
             if (opts != null) {
                 opts = "{" + opts + "}";
@@ -596,7 +597,7 @@ function d(obj) {
             var divHead = document.createElement('div');
             divCate.appendChild(divHead);
             var title = document.createElement('span');
-            title.innerHTML = arrChildNodes[k].getAttribute('title');
+            title.innerHTML =curNode.getAttribute('title');
             title.setAttribute('class', 'cateTitle');
             divHead.appendChild(title);
 
@@ -609,30 +610,33 @@ function d(obj) {
             divHead.appendChild(arrow);
 
             var divCon = document.createElement('div');
-            //divCon.innerHTML = arrChildNodes[k].innerHTML;
-            divCon.appendChild( arrChildNodes[k]);
+            divCon.innerHTML = curNode.innerHTML;
+            //for (var m = 0; m < arrChildNodes[k].children.length; ++m) {
+            //    console.log( k + ':' + arrChildNodes[k].children[m].innerHTML);
+            //    divCon.appendChild(arrChildNodes[k].children[m]);
+            //}
             divCon.setAttribute('class', 'cateCon');
             if (expand) {
-                divCon.style.display = "block";
+                curNode.style.display = "block";
                 console.log('objRoot.style.height:' + objRoot.style.height);
-                divCon.style.height = parseInt(objRoot.style.height) - arrChildNodes.length * 29;   // 高度+1个边框
+                curNode.style.height = parseInt(objRoot.style.height) - arrChildNodes.length * 29;   // 高度+1个边框
             } else {
-                divCon.style.display = "none";
+                curNode.style.display = "none";
             }
-            divCon.style.borderBottom = "1px solid #ddd";
+            curNode.style.borderBottom = "1px solid #ddd";
 
             divCate.root = objRoot;
-            divCate.conNode = divCon;
+            divCate.conNode = curNode;
             divCate.expand = expand;
             divCate.arrow = arrow;
             divCate.addEventListener('click', function () {
                 var expandNew = !this.expand;
                 console.log('expandNew:' + expandNew);
                 var childs = this.root.children;
-                for (var p = 0; p < childs.length; ++p) {
-                    childs[p].children[1].style.display = "none";
-                    childs[p].children[0].children[0].children[1].setAttribute('class', 'downArrow');
-                    childs[p].children[0].expand = false;
+                for (var p = 0; p < childs.length; p=p+2) {
+                    childs[p + 1].style.display = "none";
+                    childs[p].children[0].children[1].setAttribute('class', 'downArrow');
+                    childs[p].expand = false;
                 }
                 this.conNode.style.height = parseInt(objRoot.style.height) - arrChildNodes.length * 29;
                 if (expandNew) {
@@ -646,8 +650,8 @@ function d(obj) {
             }, false);
 
             //arrChildNodes[k].innerHTML = "";
-            arrChildNodes[k].appendChild(divCate);
-            arrChildNodes[k].appendChild(divCon);
+            curNode.parentNode.insertBefore(divCate, arrChildNodes[k]);
+            //arrChildNodes[k].appendChild(divCon);
 
             /*
            if (k == 0){
@@ -3676,6 +3680,60 @@ function w_1(o) {
     }
 }
 
+function x(ob){
+    var o = ob == null ? document : ob;
+    var arrO = o.getElementsByClassName('bjFilebox');
+    for (var m = 0; m < arrO.length; ++m) {
+        var or = arrO[m];
+        if (or.op == null) or.op = {};
+        var op = or.getAttribute('bj:options');
+        if (op != null) {
+            op = "{" + op + "}";
+            var jso = eval("(" + op + ")");
+            for (var t in jso) or.op[t] = jso[t];
+        }
+        console.log('or.options:' + JSON.stringify(or.op));
+
+        var ct = document.createElement("div");
+        ct.setAttribute('class', 'bjFileboxContainer');
+        ct.style.width = ((or.op.width === undefined) ? 200: or.op.width) + "px";
+        or.parentNode.insertBefore(ct, or);
+
+        var lb = document.createElement("span");
+        lb.setAttribute('class', 'bjFileboxButton');
+        ct.appendChild(lb);
+        lb.innerHTML = or.op.label;
+
+        var fl= document.createElement("input");
+        fl.setAttribute('class', 'bjFileboxFileName');
+        console.log('parseInt(Width):' + parseInt(ct.style.width));
+        fl.style.width = (parseInt(ct.offsetWidth) - parseInt(lb.offsetWidth) - 10) + "px";
+        fl.style.outline = "none";
+        fl.placeholder = or.getAttribute('placeholder');
+        ct.appendChild(fl);
+
+        var or2 = or.cloneNode(true);
+        or2.op = or.op;
+        if (bjDebug) console.log('or2.options:' + JSON.stringify(or2.op));
+        ct.appendChild(or2);
+        or.parentNode.removeChild(or);
+        or = or2;
+        var ty = or.getAttribute('type');
+        if (ty == undefined){
+            or.setAttribute('type', 'file');
+        }
+
+        or.style.width = parseInt(lb.offsetWidth) + "px";   // same as button
+        or.fl = fl;
+        or.addEventListener('change', function () {
+            fl.value = this.value;
+            if (this.op.change)this.op.change(this.value);
+        });
+
+        or.removeAttribute('options');
+    }
+}
+
 function gg_pm() {
     if (document.mask == null) {
         var mask = document.createElement('div');
@@ -3718,7 +3776,8 @@ var bj = function (id) {
         return null;
     }
 
-    if (obj.options == null)obj.options=new Object();
+    if (obj.options == null)obj.options=new Object();   // will delete later
+    if (obj.op == null)obj.op=new Object();
     obj.parentNode = getParentNode(obj);  // ???????
 
     // 处理样式 根据参数个数风别处理一个属性的设置或json形式（多个属性）的设置
@@ -4040,7 +4099,11 @@ var bj = function (id) {
             console.log("bjRadio options3:" + JSON.stringify(arguments[0]));
         };
     }
-    
+    else if( (cl != "") && (cl != null) && (cl.indexOf('bjFilebox') >= 0) ){
+        obj.change = function(){
+            bj_1(bArray, this, arguments);
+        };
+    }
 
     obj.change2 = function () {
         funName = arguments[0];
@@ -4317,7 +4380,17 @@ var bj = function (id) {
 
     return obj;
 }
- 
+
+function bj_1(b, o, p){
+    if (b) {
+        for (var m = 0; m < o.length; ++m) {
+            o[m].op.change = p[0];
+        }
+    }
+    else {
+        o.op.change = p[0];
+    }
+}
 
 bj.ready = function (f) {
     objBj.lr[objBj.lr.length] = f;

@@ -1311,3 +1311,48 @@ table {
 	margin-left:10px;
 	width:50px;
 }
+
+.bjFileboxContainer{
+    display: inline-block;
+    width: 150px;
+    height:28px;
+    border:1px solid #ccc;
+    position: relative;
+    border-radius: 0px;
+}
+
+.bjFilebox{
+    border:0px;
+    filter:alpha(opacity=0);
+    opacity:0;
+    width:100%;
+    height:100%;
+    position: absolute;
+    right:0px;
+    top:0px;
+}
+
+.bjFileboxFileName{
+    border:none;
+    width:100%;
+    height:100%;
+    line-height: 28px;
+    position: absolute;
+    left:0px;
+    top:0px;
+    padding: 0px 4px;
+}
+
+.bjFileboxButton{
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    line-height: 28px;
+    padding: 0px 2px;
+    right: -1px;
+    margin-top: -1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
